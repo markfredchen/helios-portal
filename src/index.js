@@ -1,2 +1,1 @@
-var app = document.getElementById("app");
-app.innerHTML = 'hi asdfa';
+document.getElementById("app").innerHTML = 'hi asdfa';
