@@ -14,7 +14,7 @@ export default {
     ],
     output: {
         path: path.join(__dirname, 'dist'), // Note: Physical files are only output by the production build task `npm run build`.
-        publicPath: '/dist',
+        publicPath: '/',
         filename: 'bundle.js'
     },
     plugins: [
