@@ -53,7 +53,6 @@ export default {
             {test: /\.svg(\?v=\d+.\d+.\d+)?$/, loader: 'file-loader?limit=10000&mimetype=image/svg+xml'},
             {test: /\.(jpe?g|png|gif)$/i, loaders: ['file']},
             {test: /\.ico$/, loader: 'file-loader?name=[name].[ext]'},
-            {test: /(\.css|\.scss)$/, include: path.join(__dirname, 'node_modules/antd'), loader: extractAntd.extract('css')},
             {test: /(\.css|\.scss)$/, include: path.join(__dirname, 'src'), loader: extractCss.extract('css!postcss!sass')}
         ]
     }

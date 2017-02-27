@@ -1,8 +1,9 @@
 import React from 'react';
-import {Layout} from 'antd';
+import {Layout, Button} from 'antd';
 import {render} from 'react-dom';
+import './index.scss';
 
-const { Header, Content } = Layout;
+const {Header, Content} = Layout;
 
 class App extends React.Component {
     render() {
@@ -10,7 +11,9 @@ class App extends React.Component {
             <div>
                 <Layout>
                     <Header>Header</Header>
-                    <Content>Content</Content>
+                    <Content className="main">
+                        <Button type="primary">Primary</Button>
+                    </Content>
                 </Layout>
             </div>
         );
