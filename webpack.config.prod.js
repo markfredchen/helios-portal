@@ -6,7 +6,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 const extractCss = new ExtractTextPlugin('app.[contenthash].css');
 const extractAntd = new ExtractTextPlugin('antd.[contenthash].css');
 
-const updateIndexHtml = require('./tools/updateIndexHTML');
+const updateIndexHtml = require('./tools/tasks/updateIndexHTML');
 
 const GLOBALS = {
     'process.env.NODE_ENV': JSON.stringify('production'),
@@ -14,7 +14,7 @@ const GLOBALS = {
 };
 
 export default {
-    entry: ['babel-polyfill', './src/index'],
+    entry: ['./src/index'],
     target: 'web',
     output: {
         path: path.join(__dirname, 'dist'),
@@ -27,7 +27,6 @@ export default {
         new webpack.DefinePlugin(GLOBALS),
         extractAntd,
         extractCss,
-        new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false

@@ -13,3 +13,6 @@
 - add more `npm run xxx` commands. e.g. run lint with build
 
 
+# TODO: List
+- I18N implementation
+- State Management
